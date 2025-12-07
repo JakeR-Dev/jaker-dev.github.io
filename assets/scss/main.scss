@@ -1,0 +1,22 @@
+@use "mixins.scss" as *;
+@use "tailwindcss" as *;
+
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @include media(tablet) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include media(wide) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+#hero {
+  
+}
