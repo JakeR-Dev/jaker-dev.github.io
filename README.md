@@ -1,5 +1,5 @@
 # jaker-dev.github.io
-Portfolio for Jake
+Jake's portfolio / sandbox
 
 ## Dependencies
 

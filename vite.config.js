@@ -8,9 +8,17 @@ export default defineConfig({
       usePolling: false,
     },
   },
+  css: {
+    devSourcemap: true,
+    preprocessorOptions: {
+      scss: {
+        includePaths: resolve(__dirname, "assets/scss"),
+      },
+    },
+  },
   build: {
     outDir: "assets/dist",
-    emptyOutDir: false,
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         main: resolve(__dirname, "assets/js/main.js"),
