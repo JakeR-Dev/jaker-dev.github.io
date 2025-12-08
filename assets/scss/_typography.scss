@@ -1,0 +1,16 @@
+body {
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  a, button {
+    cursor: crosshair;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
