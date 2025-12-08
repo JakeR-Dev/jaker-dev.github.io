@@ -1,3 +1,7 @@
+@use "mixins" as *;
+@use "typography" as *;
+@use "variables" as *;
+
 #menu-toggle {
   position: fixed;
   right: 2rem;
@@ -8,14 +12,17 @@
   width: 32px;
   height: 32px;
   overflow: hidden;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform .4s $bounce;
   .toggle-dot {
     display: block;
     width: 8px;
     height: 8px;
-    background: var(--color-charcoal);
+    background-color: var(--color-charcoal);
     border-radius: 50%;
     border: 2px solid var(--color-cream);
-    transition: transform .4s cubic-bezier(.47,1.64,.41,.8);
+    transition: transform .4s $bounce;
     &.plus-hover {
       position: relative;
       &::before, &::after {
@@ -23,24 +30,54 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        background: var(--color-charcoal);
+        background-color: var(--color-charcoal);
         border: 2px solid var(--color-cream);
         border-radius: 10px;
         transform: translate(-50%, -50%);
         opacity: 0;
+        transition: all .4s $bounce;
       }
       &::before {
         height: 0;
-        transition: height .4s cubic-bezier(.47,1.64,.41,.8);
       }
       &::after {
         width: 0;
-        transition: width .4s cubic-bezier(.47,1.64,.41,.8);
       }
     }
   }
-  &:hover {
+  &[aria-expanded="false"] {
+    &:hover {
+      .toggle-dot {
+        &:nth-child(2) {
+          transform: translateY(-12px);
+        }
+        &:nth-child(4) {
+          transform: translateX(-12px);
+        }
+        &:nth-child(6) {
+          transform: translateX(12px);
+        }
+        &:nth-child(8) {
+          transform: translateY(12px);
+        }
+        &.plus-hover::before,
+        &.plus-hover::after {
+          opacity: 1;
+        }
+        &.plus-hover::before {
+          height: 32px;
+        }
+        &.plus-hover::after {
+          width: 32px;
+        }
+      }
+    }
+  }
+  &[aria-expanded="true"] {
+    transform: rotate(45deg);
     .toggle-dot {
+      border-color: var(--color-charcoal);
+      background-color: var(--color-cream);
       &:nth-child(2) {
         transform: translateY(-12px);
       }
@@ -55,6 +92,8 @@
       }
       &.plus-hover::before,
       &.plus-hover::after {
+        border-color: var(--color-charcoal);
+        background-color: var(--color-cream);
         opacity: 1;
       }
       &.plus-hover::before {
@@ -68,5 +107,54 @@
 }
 
 #menu {
-
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-cream);
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 1;
+  transition: left .8s $elastic;
+  @include fancy-border(charcoal);
+  &.menu-open {
+    left: 0;
+    pointer-events: all;
+    opacity: 1;
+  }
+  .menu-inner {
+    padding: 4rem;
+  }
+  ul {
+    list-style: inside decimal-leading-zero;
+    li {
+      a {
+        @extend .h2;
+        display: inline-block;
+        text-shadow: 2px 2px 0px var(--color-neon);
+        transition: text-shadow .3s $elastic;
+        &:hover {
+          text-shadow: 6px 6px 0px var(--color-neon);
+        }
+      }
+    }
+    a.social {
+      img {
+        display: inline-block;
+        max-width: 24px;
+        max-height: 24px;
+        margin-top: 2rem;
+        border-radius: 4px;
+        box-shadow: 2px 2px 0 var(--color-neon);
+        transition: box-shadow .3s $elastic;
+      }
+      &:hover {
+        img {
+          box-shadow: 6px 6px 0px var(--color-neon);
+        }
+      }
+    }
+  }
 }

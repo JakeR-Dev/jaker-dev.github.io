@@ -1,0 +1,36 @@
+@use "mixins" as *;
+
+.main {
+  height: 100%;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @include media(tablet) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include media(wide) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 4rem;
+  background: var(--color-charcoal);
+  @include fancy-border(cream);
+}
+
+#hero {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}

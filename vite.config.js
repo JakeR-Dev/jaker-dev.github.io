@@ -3,11 +3,6 @@ import { resolve } from "path";
 
 export default defineConfig({
   root: ".",  // root of the project
-  server: {
-    watch: {
-      usePolling: false,
-    },
-  },
   css: {
     devSourcemap: true,
     preprocessorOptions: {
@@ -19,6 +14,7 @@ export default defineConfig({
   build: {
     outDir: "assets/dist",
     emptyOutDir: true,
+    manifest: true,
     rollupOptions: {
       input: {
         main: resolve(__dirname, "assets/js/main.js"),

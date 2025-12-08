@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jake Ryan - Front End Developer</title>
-    <link rel="stylesheet" href="/assets/dist/main.min.css">
+    
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
@@ -13,14 +13,21 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
+    
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- inter + space grotesk -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- local dev entry point -->
+    <!-- <script type="module" src="/assets/js/main.js"></script> -->
+    <!-- built stylesheet -->
+    <link rel="stylesheet" href="/assets/dist/main.min.css">
   </head>
   <body>
     <header>
-      <button id="menu-toggle" aria-label="open menu">
+      <button id="menu-toggle" aria-label="open menu" aria-expanded="false">
         <span class="toggle-dot" aria-hidden></span>
         <span class="toggle-dot" aria-hidden></span>
         <span class="toggle-dot" aria-hidden></span>
@@ -32,54 +39,74 @@
         <span class="toggle-dot" aria-hidden></span>
       </button>
       <aside id="menu">
-        <ul>
-          <li>
-            <a href="#top">Home</a>
-          </li>
-          <li>
-            <a href="#about">About Me</a>
-          </li>
-          <li>
-            <a href="#skillset">Skill Set</a>
-          </li>
-          <li>
-            <a href="#samples">Samples</a>
-          </li>
-          <li>
-            <a href="#resume">Resume</a>
-          </li>
-          <li class="social">
-            <a href="https://www.linkedin.com/in/jakepotterryan/" target="_blank"><img src="/assets/linkedin-icon-blue.png" alt="visit my linkedin profile"></a>
-          </li>
-        </ul>
+        <div class="menu-inner">
+          <ul>
+            <li>
+              <a href="#top">Home</a>
+            </li>
+            <li>
+              <a href="#about">About Me</a>
+            </li>
+            <li>
+              <a href="#skillset">Skill Set</a>
+            </li>
+            <li>
+              <a href="#samples">Samples</a>
+            </li>
+            <li>
+              <a href="#resume">Resume</a>
+            </li>
+            <a class="social" href="https://www.linkedin.com/in/jakepotterryan/" target="_blank"><img src="/assets/img/linkedin-black.png" alt="visit my linkedin profile"></a>
+          </ul>
+        </div>
       </aside>
     </header>
 
     <main class="main">
       <!-- hero -->
-      <section id="hero" class="d-none">
-        <div class="container">
-
+      <section id="hero" class="">
+        <div class="upper">
+          <h1 class="color-cream">Hey, <br>I'm Jake</h1>
+          <h3 class="color-neon">Web Developer who loves to create things</h3>
+        </div>
+        <div class="lower">
+          <div class="technologies flex flex-wrap mt-4">
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">PHP</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">JavaScript</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">HTML</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">SCSS</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">Tailwind</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">jQuery</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">TypeScript</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">React</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">CSS</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">WordPress</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">Node.js</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">WebFlow</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">PhotoShop</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">Google Analytics</div>
+            <div class="pill bg-cream color-charcoal py-2 px-6 m-2 rounded-2xl text-center">ADA Compliance</div>
+          </div>
         </div>
       </section>
 
       <!-- about -->
-      <section id="about" class="d-none">
+      <section id="about" class="hidden">
       
       </section>
 
       <!-- skillset -->
-      <section id="skillset" class="d-none">
+      <section id="skillset" class="hidden">
       
       </section>
 
       <!-- samples -->
-      <section id="samples" class="d-none">
+      <section id="samples" class="hidden">
       
       </section>
 
       <!-- resume -->
-      <section id="resume" class="d-none">
+      <section id="resume" class="hidden">
         <a name="resume"></a>
         <div class="row align-center">
           <div class="small-12 medium-11 large-10 column">
@@ -96,7 +123,7 @@
         </div>
       </section>
     </main>
-
+    <!-- bult js -->
     <script src="/assets/dist/main.min.js"></script>
   </body>
 </html>

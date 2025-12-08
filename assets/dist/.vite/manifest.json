@@ -1,0 +1,11 @@
+{
+  "assets/js/main.js": {
+    "file": "main.min.js",
+    "name": "main",
+    "src": "assets/js/main.js",
+    "isEntry": true,
+    "css": [
+      "main.min.css"
+    ]
+  }
+}

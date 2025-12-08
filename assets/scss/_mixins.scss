@@ -31,3 +31,17 @@
 		}
 	}
 }
+
+@mixin fancy-border($border-color) {
+	&::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    top: 1rem;
+    left: 1rem;
+    border: 2px solid var(--color-#{$border-color});
+    pointer-events: none;
+    border-radius: 4px;
+  }
+}
