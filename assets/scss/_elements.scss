@@ -1,0 +1,20 @@
+#hero {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  .lower {
+    max-width: 100%;
+  }
+}
+.swiper.technologies {
+  .swiper-wrapper {
+    transition-timing-function: linear !important; /* required for smooth continuous movement */
+    will-change: transform;
+  }
+  .swiper-slide {
+    width: auto;
+  }
+}

@@ -1,5 +1,9 @@
+import Swiper from 'swiper';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 import '../scss/main.scss';
 
+// nav toggle
 function toggleMenu() {
   const menuToggle = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("menu");
@@ -17,6 +21,27 @@ function toggleMenu() {
     }
   });
 }
+
 document.addEventListener("DOMContentLoaded", function() {
-  toggleMenu()
+  // menu toggle logic
+  toggleMenu();
+
+  // technologies ticker
+  Swiper.use([Autoplay]);
+  const swiper = new Swiper('.swiper.technologies', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    loop: true,
+    loopedSlides: 15,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+    },
+    speed: 4000,
+    observer: true,
+    observeParents: true,
+  });
 });
+
