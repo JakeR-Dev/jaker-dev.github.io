@@ -25,9 +25,9 @@
     <!-- built stylesheet -->
     <link rel="stylesheet" href="/assets/dist/main.min.css">
   </head>
-  <body>
+  <body class="relative w-screen h-screen bg-charcoal">
     <header>
-      <button id="menu-toggle" aria-label="open menu" aria-expanded="false">
+      <button id="menu-toggle" aria-label="open menu" aria-expanded="false" style="opacity: 0;">
         <span class="toggle-dot" aria-hidden></span>
         <span class="toggle-dot" aria-hidden></span>
         <span class="toggle-dot" aria-hidden></span>
@@ -42,19 +42,13 @@
         <div class="menu-inner">
           <ul>
             <li>
-              <a href="#top">Home</a>
+              <a href="#hero">Home</a>
             </li>
             <li>
-              <a href="#about">About Me</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#skillset">Skill Set</a>
-            </li>
-            <li>
-              <a href="#samples">Samples</a>
-            </li>
-            <li>
-              <a href="#resume">Resume</a>
+              <a href="#work">Work</a>
             </li>
             <a class="social" href="https://www.linkedin.com/in/jakepotterryan/" target="_blank"><img src="/assets/img/linkedin-black.png" alt="visit my linkedin profile"></a>
           </ul>
@@ -62,69 +56,56 @@
       </aside>
     </header>
 
-    <main class="main">
+    <main class="main relative h-full z-0" style="opacity: 0;">
       <!-- hero -->
-      <section id="hero" class="">
+      <section id="hero" class="flex flex-col flex-nowrap justify-between items-start size-full">
         <div class="upper">
           <h1 class="color-cream">Hey I'm Jake</h1>
           <h3 class="color-neon">Web Developer who loves to create things</h3>
         </div>
-        <div class="lower">
+        <div class="lower max-w-full">
           <div class="swiper technologies mt-4">
             <div class="swiper-wrapper">
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">PHP</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">JavaScript</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">HTML</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">SCSS</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Tailwind</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">jQuery</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Skiing</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">TypeScript</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">React</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">CSS</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">WordPress</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Mountain Biking</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">WebFlow</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">PhotoShop</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">HubSpot</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Google Analytics</div>
-              <div class="swiper-slide pill bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">ADA Compliance</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">PHP</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">JavaScript</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">HTML</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">SCSS</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Tailwind</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Skiing</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">jQuery</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">TypeScript</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">React</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">CSS</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">WordPress</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">WebFlow</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Mountain Biking</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">PhotoShop</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">HubSpot</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Google Analytics</div>
+              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">ADA Compliance</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- about -->
-      <section id="about" class="hidden">
-      
-      </section>
-
-      <!-- skillset -->
-      <section id="skillset" class="hidden">
-      
+      <section id="about" class="hidden flex-row flex-wrap justify-center items-center gap-8 lg:gap-10 size-full">
+        <div class="left flex-1">
+          <img src="/assets/img/jake-headshot-cropped.jpg" class="block rounded-full mb-4 max-h-[100px]" alt="Jake's headshot">
+          <h2 class="color-cream">About Me</h2>
+          <p class="color-cream">I'm a web developer with over a decade of experience in bringing innovative designs to life. I take the phrase "pixel perfect" literally and I believe that website interactions, when done right, can leave a lasting impact on the user.</p>
+          <p class="color-cream">I have experience in a variety of technologies, including PHP, JavaScript, HTML, SCSS, Tailwind, and more. I have a deep knowledge of CMS platforms, most prominently WordPress, but also WebFlow and HubSpot. I have a strong understanding of ADA compliance and Google Analytics as well. Take a look at my resume to see my full skillset.</p>
+          <a href="/assets/img/Jake Ryan Resume-FS.pdf" class="btn">Full Resume</a>
+        </div>
+        <div class="right flex-1">
+          <blockquote class="color-cream relative pt-20"><p class="h3">Beyond his technical abilities, Jake is approachable, easy to work with, and genuinely enjoyable to collaborate with. I’ve always trusted him, and any team would be lucky to have him."</p>
+          <cite>Amanda Garceau, VP of Engineering at HUSL Digital</cite></blockquote>
+        </div>
       </section>
 
       <!-- samples -->
-      <section id="samples" class="hidden">
+      <section id="work" class="hidden flex-col flex-nowrap justify-between items-start size-full">
       
-      </section>
-
-      <!-- resume -->
-      <section id="resume" class="hidden">
-        <a name="resume"></a>
-        <div class="row align-center">
-          <div class="small-12 medium-11 large-10 column">
-            <h2>Resume.</h2>
-            <div class="row align-center">
-              <div class="small-12 medium-11 large-10 column text-center">
-                <div class="snapshot">
-                  <img src="/assets/img/jake-ryan-resume-screenshot.png" alt="Preview of my resume">
-                  <a href="/assets/img/jake-ryan-resume.pdf" class="resume-link" alt="View full resume" target="_blank">Full Resume</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
     </main>
     <!-- bult js -->

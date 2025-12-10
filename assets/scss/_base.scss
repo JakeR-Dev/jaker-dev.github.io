@@ -1,32 +1,42 @@
 @use "mixins" as *;
+@use "variables" as *;
 
-.main {
-  position: relative;
-  z-index: 0;
-  height: 100%;
-}
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  @include media(tablet) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  @include media(wide) {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
+#menu-toggle, main {
+  opacity: 0;
+  will-change: opacity;
 }
 body {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background: var(--color-charcoal);
-  @include fancy-border(cream);
   padding: 4rem 3rem;
   @include media(tablet) {
     padding: 4rem;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    border: 2px solid var(--color-cream);
+    pointer-events: none;
+    width: 2rem;
+    height: 2rem;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    will-change: width, height, border-radius;
+  }
+  &.show-me {
+    #menu-toggle {
+      opacity: 1 !important;
+      transition: opacity .2s linear 1.25s, transform 0.4s $bounce;
+    }
+    main {
+      opacity: 1 !important;
+      transition: opacity .2s linear 1s;
+    }
+    &::after {
+      width: calc(100% - 2rem);
+      height: calc(100% - 2rem);
+      border-radius: 4px;
+      transition: width 1s $elastic, height 1s $elastic, border-radius .5s $elastic;
+    }
   }
 }

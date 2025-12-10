@@ -1,20 +1,60 @@
-#hero {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 100%;
-  width: 100%;
-  .lower {
-    max-width: 100%;
-  }
-}
+@use "mixins" as *;
+@use "variables" as *;
+
 .swiper.technologies {
   .swiper-wrapper {
-    transition-timing-function: linear !important; /* required for smooth continuous movement */
+    transition-timing-function: linear !important;
     will-change: transform;
   }
   .swiper-slide {
     width: auto;
+  }
+}
+
+blockquote {
+  &::before {
+    content: '"';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--font-heading);
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-gray);
+    z-index: -1;
+    opacity: 0.3;
+  }
+}
+
+a.btn {
+  position: relative;
+  display: inline-block;
+  padding: .5rem 1rem .4rem;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background: transparent;
+  border: 2px solid var(--color-neon);
+  color: var(--color-neon);
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color .3s ease-out;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--color-neon);
+    z-index: -1;
+    transition: width .4s $bounce;
+  }
+  &:hover {
+    color: var(--color-charcoal);
+    &::before {
+      width: 100%;
+    }
   }
 }
