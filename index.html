@@ -21,9 +21,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     
     <!-- local dev entry point -->
-    <!-- <script type="module" src="/assets/js/main.js"></script> -->
+    <script type="module" src="/assets/js/main.js"></script>
     <!-- built stylesheet -->
-    <link rel="stylesheet" href="/assets/dist/main.min.css">
+    <!-- <link rel="stylesheet" href="/assets/dist/main.min.css"> -->
   </head>
   <body class="relative w-screen h-screen bg-charcoal">
     <header>
@@ -66,23 +66,23 @@
         <div class="lower max-w-full">
           <div class="swiper technologies mt-4">
             <div class="swiper-wrapper">
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">PHP</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">JavaScript</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">HTML</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">SCSS</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Tailwind</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Skiing</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">jQuery</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">TypeScript</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">React</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">CSS</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">WordPress</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">WebFlow</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Mountain Biking</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">PhotoShop</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">HubSpot</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">Google Analytics</div>
-              <div class="swiper-slide pill w-auto bg-cream color-charcoal py-2 px-6 rounded-2xl text-center whitespace-nowrap">ADA Compliance</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">PHP</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">JavaScript</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">HTML</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">SCSS</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">Tailwind</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">Skiing</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">jQuery</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">TypeScript</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">React</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">CSS</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">WordPress</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">WebFlow</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">Mountain Biking</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">PhotoShop</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">HubSpot</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">Google Analytics</div>
+              <div class="swiper-slide pill bg-cream color-charcoal">ADA Compliance</div>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
           <h2 class="color-cream">About Me</h2>
           <p class="color-cream">I'm a web developer with over a decade of experience in bringing innovative designs to life. I take the phrase "pixel perfect" literally and I believe that website interactions, when done right, can leave a lasting impact on the user.</p>
           <p class="color-cream">I have experience in a variety of technologies, including PHP, JavaScript, HTML, SCSS, Tailwind, and more. I have a deep knowledge of CMS platforms, most prominently WordPress, but also WebFlow and HubSpot. I have a strong understanding of ADA compliance and Google Analytics as well. Take a look at my resume to see my full skillset.</p>
-          <a href="/assets/img/Jake Ryan Resume-FS.pdf" class="btn">Full Resume</a>
+          <a href="/assets/img/Jake Ryan Resume-FS.pdf" class="btn"><span>Full Resume</span></a>
         </div>
         <div class="right flex-1">
           <blockquote class="color-cream relative pt-20"><p class="h3">Beyond his technical abilities, Jake is approachable, easy to work with, and genuinely enjoyable to collaborate with. I’ve always trusted him, and any team would be lucky to have him."</p>
@@ -104,11 +104,68 @@
       </section>
 
       <!-- samples -->
-      <section id="work" class="hidden flex-col flex-nowrap justify-between items-start size-full">
-      
+      <section id="work" class="hidden flex-row flex-wrap md:flex-nowrap justify-center items-center size-full">
+        <div class="left flex-1 md:flex-none md:max-w-[40%] p-8 md:pl-0">
+          <h2 class="color-cream">Work Samples</h2>
+          <p class="color-cream">Here are some of my notable work samples from over the years. They represent a wide variety of technologies and challenges. I'm always looking for fun and exciting projects, so don't hesitate to reach out if you have an idea worth exploring. Browse away!</p>
+        </div>
+        <div class="right flex-1 md:max-w-[60%] p-8 md:pr-0">
+          <div class="swiper work-samples">
+            <div class="swiper-wrapper">
+              <!-- aila -->
+              <div class="swiper-slide">
+                <div class="p-10 pb-12 rounded-sm bg-cream h-full">
+                  <img src="/assets/img/aila-screenshot-1.png" class="border-4 border-(--color-charcoal) rounded-sm mb-6 max-h-[300px]" alt="Aila website screenshot">
+                  <div class="flex flex-row flex-wrap mb-4">
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Web Development</div>
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Javascript</div>
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">PHP</div>
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Figma</div>
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Wordpress</div>
+                  </div>
+                  <h3 class="color-charcoal">Aila Technologies</h3>
+                  <p>Aila's mission is to empower enterprises with self-service solutions that conquer lines and labor challenges. The goal was to build them a scalable and flexible WordPress theme that can keep up with the demands of a dynamic, growing business.</p>
+                  <a href="https://www.ailatech.com/" target="_blank" rel="nofollow" class="btn btn-neon"><span>Visit</span></a>
+                </div>
+              </div>
+              <!-- alteryx -->
+              <div class="swiper-slide">
+                <div class="py-10 px-10 rounded-[4px] bg-cream h-full">
+                  <img src="/assets/img/alteryx-screenshot.png" class="border-4 border-(--color-charcoal) rounded-sm mb-6 max-h-[300px]" alt="Alteryx website screenshot">
+                  <div class="flex flex-row flex-wrap mb-4">
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Web Development</div>
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">PHP</div>
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Javascript</div>
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Wordpress</div>
+                    <div class="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Wistia</div>
+                  </div>
+                  <h3 class="color-charcoal">Alteryx</h3>
+                  <p>Organizations across the globe use the Alteryx AI-powered data analytics platform to improve efficiencies, reduce costs and mitigate risk. The challenge was to create an enterprise-scale website that utilizes several different content types, while maintaining a performance-first mindset.</p>
+                  <a href="https://www.alteryx.com/" target="_blank" rel="nofollow" class="btn btn-neon"><span>Visit</span></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="py-10 px-10 rounded-[4px] bg-cream">
+                  <h3 class="color-charcoal">Sample 3</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="py-10 px-10 rounded-[4px] bg-cream">
+                  <h3 class="color-charcoal">Sample 4</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="py-10 px-10 rounded-[4px] bg-cream">
+                  <h3 class="color-charcoal">Sample 5</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination work-samples-pagination"></div>
+          </div>
+        </div>
       </section>
     </main>
     <!-- bult js -->
-    <script src="/assets/dist/main.min.js"></script>
+    <!-- <script src="/assets/dist/main.min.js"></script> -->
   </body>
 </html>

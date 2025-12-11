@@ -1,13 +1,15 @@
 import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
 import '../scss/main.scss';
 
 // ready to show
-function showPage() {
+function showPage(firstLoad) {
   document.body.classList.add('show-me');
-  // tech ticker
-  techTicker();
+  // if first page load, init techTicker()
+  if (firstLoad) {
+    techTicker();
+  }
 }
 
 // ready to hide
@@ -63,6 +65,24 @@ function techTicker() {
   });
 }
 
+// work slider
+function workSlider() {
+  const workSlider = document.querySelector('.swiper.work-samples');
+  if (!workSlider) return;
+
+  Swiper.use([Pagination]);
+  new Swiper (workSlider, {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    grabCursor: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination.work-samples-pagination",
+      clickable: true,
+    },
+  });
+}
+
 // click link logic
 function clickLink() {
   const links = document.querySelectorAll("a[href^='#']");
@@ -84,6 +104,13 @@ function clickLink() {
       if (targetElement) {
         targetElement.classList.add('flex');
         targetElement.classList.remove('hidden');
+        // if #hero, init tech ticker
+        if (targetId === '#hero') {
+          techTicker();
+        // if #work, init work slider
+        } else if (targetId === '#work') {
+          workSlider();
+        }
       }
       // hide the nav
       toggleNavAction(menuToggle, navMenu);
@@ -95,7 +122,7 @@ function clickLink() {
 
 document.addEventListener("DOMContentLoaded", function() {
   // show the page
-  setTimeout(showPage, 500);
+  setTimeout(showPage(true), 500);
   // nav toggle logic
   toggleNavClick();
   // click link logic

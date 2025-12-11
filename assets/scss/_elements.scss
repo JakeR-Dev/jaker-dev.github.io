@@ -1,15 +1,27 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-.swiper.technologies {
-  .swiper-wrapper {
-    transition-timing-function: linear !important;
-    will-change: transform;
+.swiper {
+  &.technologies {
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+      will-change: transform;
+    }
+    .swiper-slide {
+      width: auto;
+    }
   }
-  .swiper-slide {
-    width: auto;
+  &.work-samples {
+    .swiper-slide {
+      height: auto;
+      width: 80%;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--color-charcoal);
   }
 }
+
 
 blockquote {
   &::before {
@@ -40,6 +52,10 @@ a.btn {
   font-size: 14px;
   letter-spacing: 1px;
   transition: color .3s ease-out;
+  span {
+    position: relative;
+    z-index: 1;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -48,7 +64,7 @@ a.btn {
     top: 0;
     left: 0;
     background: var(--color-neon);
-    z-index: -1;
+    z-index: 0;
     transition: width .4s $bounce;
   }
   &:hover {
@@ -57,4 +73,29 @@ a.btn {
       width: 100%;
     }
   }
+  &.btn-dark {
+    color: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+    &::before {
+      background: var(--color-charcoal);
+    }
+    &:hover {
+      color: var(--color-neon);
+    }
+  }
+  &.btn-neon {
+    background: var(--color-neon);
+    color: var(--color-charcoal);
+    &::before {
+      background: var(--color-charcoal);
+    }
+    &:hover {
+      color: var(--color-neon);
+      border-color: var(--color-charcoal);
+    }
+  }
+}
+
+.pill {
+  @apply py-2 px-6 rounded-2xl text-center whitespace-nowrap leading-none;
 }
