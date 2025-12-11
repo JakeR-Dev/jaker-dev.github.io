@@ -14,7 +14,9 @@
   &.work-samples {
     .swiper-slide {
       height: auto;
-      width: 80%;
+      @include media(wide) {
+        width: 80%;
+      }
     }
   }
   .swiper-pagination-bullet-active {

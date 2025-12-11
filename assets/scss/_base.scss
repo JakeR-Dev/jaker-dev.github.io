@@ -5,9 +5,15 @@
   opacity: 0;
   will-change: opacity;
 }
+main {
+  overflow: auto;
+}
 body {
-  padding: 4rem 3rem;
+  padding: 4rem 2rem 2rem;
   @include media(tablet) {
+    padding: 4rem 3rem;
+  }
+  @include media(desktop) {
     padding: 4rem;
   }
   &::after {
