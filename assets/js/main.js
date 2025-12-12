@@ -88,6 +88,7 @@ function clickLink() {
   const links = document.querySelectorAll("a[href^='#']");
   links.forEach(function(link) {
     link.addEventListener('click', function(e) {
+      e.preventDefault();
       const menuToggle = document.getElementById("menu-toggle");
       const navMenu = document.getElementById("menu");
       const targetId = this.getAttribute('href');

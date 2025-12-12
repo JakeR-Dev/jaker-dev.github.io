@@ -1,0 +1,26 @@
+@keyframes drift1 {
+  0% {
+    background-position: 0 0;
+  }
+  20% {
+    background-position: -50% 10%;
+  }
+  40% {
+    background-position: 50% -60%;
+  }
+  50% {
+    background-position: 90% 50%;
+  }
+  60% {
+    background-position: 120% 20%;
+  }
+  80% {
+    background-position: 70% -120%;
+  }
+  90% {
+    background-position: 20% 20%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
