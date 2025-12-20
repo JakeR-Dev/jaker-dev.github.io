@@ -26,16 +26,16 @@
   </head>
   <body class="relative w-screen h-screen bg-charcoal">
     <header>
-      <button id="menu-toggle" class="fixed grid right-[2rem] top-[2rem] gap-[4px] w-[2rem] h-[2rem] overflow-hidden z-2 cursor-pointer" aria-label="open menu" aria-expanded="false" style="opacity: 0;">
-        <span class="toggle-dot" aria-hidden></span>
-        <span class="toggle-dot" aria-hidden></span>
-        <span class="toggle-dot" aria-hidden></span>
-        <span class="toggle-dot" aria-hidden></span>
-        <span class="toggle-dot plus-hover" aria-hidden></span>
-        <span class="toggle-dot" aria-hidden></span>
-        <span class="toggle-dot" aria-hidden></span>
-        <span class="toggle-dot" aria-hidden></span>
-        <span class="toggle-dot" aria-hidden></span>
+      <button id="menu-toggle" class="fixed grid grid-cols-3 right-[2rem] top-[2rem] gap-[4px] w-[2rem] h-[2rem] overflow-hidden z-2 cursor-pointer" aria-label="open menu" aria-expanded="false" style="opacity: 0;">
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full plus-hover relative" aria-hidden></span>
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
+        <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
       </button>
       <aside id="menu" class="fixed top-0 left-[-100vw] w-screen h-screen bg-cream z-1 overflow-hidden opacity-1 pointer-events-none">
         <div class="menu-inner pt-[5rem] px-[2rem] pb-[2rem] md:pt-[4rem] md:px-[3rem] md:pb-[3rem] lg:p-[4rem]">
@@ -55,7 +55,7 @@
       </aside>
     </header>
 
-    <main class="main relative h-full z-0" style="opacity: 0;">
+    <main class="main relative h-full z-0 overflow-auto" style="opacity: 0;">
       <!-- hero -->
       <section id="hero" class="flex flex-col flex-nowrap justify-between items-start size-full">
         <div class="upper">
@@ -94,7 +94,7 @@
           <h2 class="color-cream">About Me</h2>
           <p class="color-cream">I'm a web developer with over a decade of experience in bringing innovative designs to life. I take the phrase "pixel perfect" literally and I believe that website interactions, when done right, can leave a lasting impact on the user.</p>
           <p class="color-cream">I have experience in a variety of technologies, including PHP, JavaScript, HTML, SCSS, Tailwind, and more. I have a deep knowledge of CMS platforms, most prominently WordPress, but also WebFlow and HubSpot. I have a strong understanding of ADA compliance and Google Analytics as well. Take a look at my resume to see my full skillset.</p>
-          <a href="/assets/img/Jake Ryan Resume-FS.pdf" class="btn" target="_blank"><span>Full Resume</span></a>
+          <a href="/assets/img/Jake Ryan Resume - FS.pdf" class="btn" target="_blank"><span>Full Resume</span></a>
         </div>
         <div class="right load-2 flex-[100%] md:flex-1">
           <blockquote class="color-cream relative pt-20"><p class="h3">Beyond his technical abilities, Jake is approachable, easy to work with, and genuinely enjoyable to collaborate with. I’ve always trusted him, and any team would be lucky to have him."</p>

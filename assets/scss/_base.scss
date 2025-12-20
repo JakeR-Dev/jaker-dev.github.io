@@ -6,9 +6,6 @@ main, #menu-toggle {
   filter: blur(20px);
   will-change: opacity;
 }
-main {
-  overflow: auto;
-}
 body {
   padding: 4rem 2rem 2rem;
   @include media(tablet) {

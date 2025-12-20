@@ -3,17 +3,10 @@
 @use "variables" as *;
 
 #menu-toggle {
-  grid-template-columns: repeat(3, auto);
   .toggle-dot {
-    display: block;
-    width: 8px;
-    height: 8px;
-    background-color: var(--color-charcoal);
-    border-radius: 50%;
     border: 2px solid var(--color-cream);
     transition: transform .4s $bounce;
     &.plus-hover {
-      position: relative;
       &::before, &::after {
         content: '';
         position: absolute;
