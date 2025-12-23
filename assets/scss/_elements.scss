@@ -101,3 +101,29 @@ a.btn {
 .pill {
   @apply py-2 px-6 rounded-2xl text-center whitespace-nowrap leading-none;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.game-break {
+  cursor: pointer;
+  &_text {
+    will-change: transform;
+    animation: spin 12s linear infinite;
+  }
+  &_icon {
+    polygon {
+      transition: fill .12s linear;
+    }
+    &:hover {
+      polygon {
+        fill: var(--color-neon);
+      }
+    }
+  }
+}
