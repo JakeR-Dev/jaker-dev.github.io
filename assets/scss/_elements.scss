@@ -117,11 +117,19 @@ a.btn {
     animation: spin 12s linear infinite;
   }
   &_icon {
+    svg {
+      transition: transform .5s $bounce;
+    }
     polygon {
+      border-radius: 4px;
       transition: fill .12s linear;
     }
     &:hover {
+      svg {
+        transform: scale(1.1) rotate(-5deg);
+      }
       polygon {
+        stroke: var(--color-neon);
         fill: var(--color-neon);
       }
     }

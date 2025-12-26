@@ -55,6 +55,7 @@
   </head>
   <body class="relative w-screen h-screen bg-charcoal">
     <header>
+      <!-- menu toggler -->
       <button id="menu-toggle" class="fixed grid grid-cols-3 right-[2rem] top-[2rem] gap-[4px] w-[2rem] h-[2rem] overflow-hidden z-2 cursor-pointer" aria-label="open menu" aria-expanded="false" style="opacity: 0;">
         <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
         <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
@@ -66,6 +67,7 @@
         <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
         <span class="toggle-dot block w-[8px] h-[8px] bg-charcoal rounded-full" aria-hidden></span>
       </button>
+      <!-- menu -->
       <aside id="menu" class="fixed top-0 left-[-100vw] w-screen h-screen bg-cream z-1 overflow-hidden opacity-1 pointer-events-none">
         <div class="menu-inner pt-[5rem] px-[2rem] pb-[2rem] md:pt-[4rem] md:px-[3rem] md:pb-[3rem] lg:p-[4rem]">
           <ul>
@@ -108,10 +110,17 @@
             </div>
             <a class="game-break_icon block absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-75" href="https://jaker-dev.github.io/grid-runner/" target="blank">
               <svg width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="30,20 80,50 30,80" fill="#f4f4f6"/>
+                <polygon
+                  points="30,20 80,50 30,80"
+                  fill="#f4f4f6"
+                  stroke="#f4f4f6"
+                  stroke-width="4"
+                  stroke-linejoin="round"
+                />
               </svg>
             </a>
           </div>
+          <!-- tech swiper -->
           <div class="swiper technologies mt-4">
             <div class="swiper-wrapper">
               <div class="swiper-slide pill bg-cream color-charcoal">PHP</div>
