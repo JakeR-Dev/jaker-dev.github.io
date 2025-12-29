@@ -7,7 +7,7 @@ export default defineConfig({
     devSourcemap: true,
     preprocessorOptions: {
       scss: {
-        includePaths: resolve(__dirname, "assets/scss"),
+        includePaths: [resolve(__dirname, "assets/scss")],
       },
     },
   },

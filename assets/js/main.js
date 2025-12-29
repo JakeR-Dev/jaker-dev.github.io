@@ -121,6 +121,19 @@ function clickLink() {
   }) 
 }
 
+function hideEmail() {
+  const user = "jryan6492";
+  const domain = "gmail.com";
+  const email = user + "@" + domain;
+  const subject = "?subject=Let's%20build%20something%20together!";
+  const el = document.getElementById('email-me');
+  if (!el) return;
+
+  setTimeout(() => {
+    el.setAttribute('href', 'mailto:' + email + subject);
+  }, 800 + Math.random() * 1000);
+};
+
 document.addEventListener("DOMContentLoaded", function() {
   // show the page
   setTimeout(showPage(true), 500);
@@ -128,5 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
   toggleNavClick();
   // click link logic
   clickLink();
+  // hide my email address from bots
+  hideEmail();
 });
 

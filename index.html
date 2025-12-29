@@ -49,9 +49,9 @@
     </script>
 
     <!-- local dev entry point -->
-    <!-- <script type="module" src="/assets/js/main.js"></script> -->
-    <!-- built stylesheet -->
-    <link rel="stylesheet" href="/assets/dist/main.min.css">
+    <script type="module" src="/assets/js/main.js"></script>
+    <!-- built stylesheet (use for production build) -->
+    <!-- <link rel="stylesheet" href="/assets/dist/main.min.css"> -->
   </head>
   <body class="relative w-screen h-screen bg-charcoal">
     <header>
@@ -72,16 +72,18 @@
         <div class="menu-inner pt-[5rem] px-[2rem] pb-[2rem] md:pt-[4rem] md:px-[3rem] md:pb-[3rem] lg:p-[4rem]">
           <ul>
             <li>
-              <a href="#hero" class="inline-block">Home</a>
+              <a href="#hero">Home</a>
             </li>
             <li>
-              <a href="#about" class="inline-block">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#work" class="inline-block">Work</a>
+              <a href="#work">Work</a>
             </li>
-            <a class="social inline-block" href="https://www.linkedin.com/in/jakepotterryan/" target="_blank"><img src="/assets/img/linkedin-black.png" alt="visit my linkedin profile" class="inline-block max-w-[24px] max-h-[24px] mt-[2rem] radius-[4px]"></a>
           </ul>
+          <a class="social inline-block" href="https://www.linkedin.com/in/jakepotterryan/" target="_blank" aria-label="Visit my LinkedIn profile"><img src="/assets/img/linkedin-black.png" alt="visit my linkedin profile" class="inline-block max-w-[24px] max-h-[24px] mt-[2rem] rounded-[4px] rounded-tr-none mr-4"></a>
+          <a class="social inline-block" href="https://github.com/JakeR-Dev" target="_blank" aria-label="Visit my GitHub profile"><img src="/assets/img/github-black.png" alt="visit my github profile" class="inline-block max-w-[24px] max-h-[24px] mt-[2rem] rounded-[4px] rounded-tr-none mr-4"></a>
+          <a class="social inline-block" href="email-me" target="_blank" aria-label="Shoot me an email" id="email-me" rel="noopener noreferrer"><img src="/assets/img/email-black.png" alt="send me an email" class="inline-block max-w-[24px] max-h-[24px] mt-[2rem] rounded-[4px] rounded-tr-none mr-4"></a>
         </div>
       </aside>
     </header>
@@ -244,6 +246,6 @@
       </section>
     </main>
     <!-- built js -->
-    <script src="/assets/dist/main.min.js"></script>
+    <!-- <script src="/assets/dist/main.min.js"></script> -->
   </body>
 </html>

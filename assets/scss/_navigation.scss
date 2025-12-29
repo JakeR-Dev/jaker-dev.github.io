@@ -101,6 +101,7 @@
     li {
       a {
         @extend .h2;
+        display: inline-block;
         text-shadow: 2px 2px 0px var(--color-neon);
         transition: text-shadow .3s $elastic;
         &:hover {
@@ -108,15 +109,15 @@
         }
       }
     }
-    a.social {
+  }
+  a.social {
+    img {
+      box-shadow: 2px 2px 0 var(--color-neon);
+      transition: box-shadow .3s $elastic;
+    }
+    &:hover {
       img {
-        box-shadow: 2px 2px 0 var(--color-neon);
-        transition: box-shadow .3s $elastic;
-      }
-      &:hover {
-        img {
-          box-shadow: 6px 6px 0px var(--color-neon);
-        }
+        box-shadow: 6px 6px 0px var(--color-neon);
       }
     }
   }
