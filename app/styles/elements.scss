@@ -1,5 +1,4 @@
-@use "mixins" as *;
-@use "variables" as *;
+@use "mixins";
 
 .swiper {
   &.technologies {
@@ -14,7 +13,7 @@
   &.work-samples {
     .swiper-slide {
       height: auto;
-      @include media(wide) {
+      @include mixins.media(wide) {
         width: 80%;
       }
     }
