@@ -1,4 +1,6 @@
 import { Inter, Space_Grotesk } from "next/font/google";
+import Body from './components/body/body';
+import Header from './components/header/header';
 import "./globals.scss";
 
 const inter = Inter({
@@ -22,11 +24,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <Body className={`${inter.variable} ${spaceGrotesk.variable} antialiased relative w-screen h-screen bg-charcoal`} >
+        <Header />
+        <main className="main relative h-full z-0 overflow-auto" style={{opacity: 0}}>
+          {children}
+        </main>
+      </Body>
     </html>
   );
 }
