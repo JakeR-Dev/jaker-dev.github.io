@@ -53,7 +53,7 @@ body {
     will-change: opacity;
   }
   
-  // ** first time page border fade-in ** //
+  // ** first time page fade-in ** //
   &.border-me {
     // border
     &::after {
@@ -74,7 +74,7 @@ body {
     }
   }
 
-  // ** page fade-in ** //
+  // ** route change fade-in ** //
   &.show-me {
     // main
     main {

@@ -90,7 +90,7 @@
 
 #menu {
   @include mixins.fancy-border(charcoal);
-  transition: left .4s variables.$elastic, opacity .1s linear .4s;
+  transition: left .8s variables.$elastic, opacity .1s linear .8s;
   &.menu-open {
     left: 0;
     pointer-events: all;

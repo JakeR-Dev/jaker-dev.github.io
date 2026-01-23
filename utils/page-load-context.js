@@ -26,7 +26,7 @@ export function PageLoadProvider({ children }) {
     }
     // On route change only
     setIsLoaded(false);
-    const timer = setTimeout(() => setIsLoaded(true), 10);
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, [pathname]);
 
