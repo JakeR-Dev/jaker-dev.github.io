@@ -89,12 +89,13 @@
 }
 
 #menu {
-  transition: left .8s variables.$elastic;
   @include mixins.fancy-border(charcoal);
+  transition: left .4s variables.$elastic, opacity .1s linear .4s;
   &.menu-open {
     left: 0;
     pointer-events: all;
     opacity: 1;
+    transition: left .8s variables.$elastic;
   }
   ul {
     list-style: inside decimal-leading-zero;

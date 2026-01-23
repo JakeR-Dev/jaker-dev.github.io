@@ -65,7 +65,12 @@ body {
     // shadow
     &::before {
       opacity: 0.3;
-      transition: opacity .2s linear .2s;
+      transition: opacity .2s linear 1s;
+    }
+    .game-break,
+    .swiper.technologies {
+      opacity: 1;
+      transition: opacity .2s linear 1s;
     }
   }
 

@@ -12,7 +12,7 @@ export default function Home() {
       </div>
       <div className="lower max-w-full">
         {/* take a break */}
-        <div className="game-break block relative mb-4 rounded-full inline-block w-[150px] h-[150px]">
+        <div className="game-break block relative mb-4 rounded-full inline-block w-[150px] h-[150px] opacity-0">
           <div className="game-break_text h-full w-full color-cream">
             <svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         {/* tech swiper */}
         <Swiper
-          className={"swiper technologies mt-4"}
+          className={"swiper technologies mt-4 opacity-0"}
           modules={[Autoplay]}
           slidesPerView={'auto'}
           spaceBetween={16}

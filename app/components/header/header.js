@@ -6,10 +6,20 @@ import './header.scss';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [emailLink, setEmailLink] = useState('Email Me');
+  const email = "jryan6492@gmail.com";
+  const subject = "?subject=Let's%20build%20something%20together!";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // un-obscure my email address
+  setTimeout(() => {
+    return (
+      setEmailLink('mailto:' + email + subject)
+    );
+  }, 800 + Math.random() * 1000);
 
   return (
     <header>
@@ -63,7 +73,7 @@ export default function Header() {
               height="24"
             />
           </a>
-          <a className="social inline-block" href="email-me" target="_blank" aria-label="Shoot me an email" id="email-me" rel="noopener noreferrer">
+          <a className="social inline-block" href={emailLink} target="_blank" aria-label="Shoot me an email" id="email-me" rel="noopener noreferrer">
             <Image
               className="inline-block max-w-[24px] max-h-[24px] mt-[2rem] rounded-[4px] rounded-tr-none mr-4"
               src="/email-black.png"

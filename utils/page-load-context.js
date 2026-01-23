@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 const PageLoadContext = createContext();
@@ -8,15 +8,23 @@ export function PageLoadProvider({ children }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [borderMe, setBorderMe] = useState(false);
   const pathname = usePathname();
+  const isFirstMount = useRef(true);
 
   useEffect(() => {
     // On initial mount
-    setIsLoaded(true);
     setBorderMe(true);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 700);
   }, []);
-
+  
   useEffect(() => {
-    // On route change
+    // Skip on first mount
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
+    // On route change only
     setIsLoaded(false);
     const timer = setTimeout(() => setIsLoaded(true), 10);
     return () => clearTimeout(timer);
