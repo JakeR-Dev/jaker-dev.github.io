@@ -1,17 +1,12 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { usePageLoad } from '../../../utils/page-load-context';
 import './body.scss';
 
 export default function BodyWrapper({ children, className }) {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Set loaded after initial mount
-    setIsLoaded(true);
-  }, []);
+  const { isLoaded, borderMe } = usePageLoad();
 
   return (
-    <body className={`${className} ${isLoaded ? 'show-me' : ''}`}>
+    <body className={`${className} ${isLoaded ? 'show-me' : ''} ${borderMe ? 'border-me' : ''}`}>
       {children}
     </body>
   );

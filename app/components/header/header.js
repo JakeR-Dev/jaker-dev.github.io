@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import './header.scss';
 
 export default function Header() {
@@ -15,7 +16,7 @@ export default function Header() {
       {/* menu toggler */}
       <button 
         onClick={toggleMenu}
-        className="fixed grid grid-cols-3 right-[2rem] top-[2rem] gap-[4px] w-[2rem] h-[2rem] overflow-hidden z-2 cursor-pointer" 
+        className="fixed grid grid-cols-3 right-[2rem] top-[2rem] gap-[4px] w-[2rem] h-[2rem] overflow-hidden z-2 cursor-pointer opacity-0" 
         id="menu-toggle"
         aria-label="open menu" 
         aria-expanded={isMenuOpen}
@@ -35,13 +36,13 @@ export default function Header() {
         <div className="menu-inner pt-[5rem] px-[2rem] pb-[2rem] md:pt-[4rem] md:px-[3rem] md:pb-[3rem] lg:p-[4rem]">
           <ul>
             <li>
-              <a href="#hero" onClick={toggleMenu}>Home</a>
+              <Link href="/" onClick={toggleMenu}>Home</Link>
             </li>
             <li>
-              <a href="#about" onClick={toggleMenu}>About</a>
+              <Link href="/about" onClick={toggleMenu}>About</Link>
             </li>
             <li>
-              <a href="#work" onClick={toggleMenu}>Work</a>
+              <Link href="/work" onClick={toggleMenu}>Work</Link>
             </li>
           </ul>
           <a className="social inline-block" href="https://www.linkedin.com/in/jakepotterryan/" target="_blank" aria-label="Visit my LinkedIn profile">

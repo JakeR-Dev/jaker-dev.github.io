@@ -19,21 +19,13 @@ export default function Home() {
                 <path id="circlePath" d="M75,75 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/>
               </defs>
               <text fontFamily="Arial, sans-serif" fontSize="8" fill="#f4f4f6">
-                <textPath href="#circlePath" startOffset="0%">
-                  Take a break • Play a game • Take a break • Play a game • Take a break • Play a game •
-                </textPath>
+                <textPath href="#circlePath" startOffset="0%">Take a break • Play a game • Take a break • Play a game • Take a break • Play a game •</textPath>
               </text>
             </svg>
           </div>
           <a className="game-break_icon block absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-75" href="https://jaker-dev.github.io/grid-runner/" target="blank">
             <svg width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <polygon
-                points="30,20 80,50 30,80"
-                fill="#f4f4f6"
-                stroke="#f4f4f6"
-                strokeWidth="4"
-                strokeLinejoin="round"
-              />
+              <polygon points="30,20 80,50 30,80" fill="#f4f4f6" stroke="#f4f4f6" strokeWidth="4" strokeLinejoin="round" />
             </svg>
           </a>
         </div>
@@ -54,7 +46,6 @@ export default function Home() {
           speed={4000}
           observer={true}
           observeParents={true}>
-
             <SwiperSlide className="pill bg-cream color-charcoal">PHP</SwiperSlide>
             <SwiperSlide className="pill bg-cream color-charcoal">JavaScript (ES6+)</SwiperSlide>
             <SwiperSlide className="pill bg-cream color-charcoal">SCSS</SwiperSlide>
