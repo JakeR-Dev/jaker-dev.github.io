@@ -57,6 +57,7 @@ export default function Home() {
             <SwiperSlide className="pill bg-cream color-charcoal">jQuery</SwiperSlide>
             <SwiperSlide className="pill bg-cream color-charcoal">WebFlow</SwiperSlide>
             <SwiperSlide className="pill bg-cream color-charcoal">PhotoShop</SwiperSlide>
+            <SwiperSlide className="pill bg-cream color-charcoal">Next.js</SwiperSlide>
             <SwiperSlide className="pill bg-cream color-charcoal">HubSpot</SwiperSlide>
             <SwiperSlide className="pill bg-cream color-charcoal">Google Analytics</SwiperSlide>
             <SwiperSlide className="pill bg-cream color-charcoal">ADA Compliance</SwiperSlide>
