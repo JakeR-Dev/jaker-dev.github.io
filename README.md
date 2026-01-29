@@ -1,7 +1,7 @@
 
 # JakeR-Dev Portfolio & Sandbox
 
-![CI](https://github.com/JakeR-Dev/jaker-dev.github.io/actions/workflows/deploy.yml/badge.svg)
+![CI](https://github.com/JakeR-Dev/jaker-dev.github.io/actions/workflows/nextjs.yml/badge.svg)
 
 https://jaker-dev.github.io/
 
