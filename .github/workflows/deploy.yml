@@ -1,43 +1,51 @@
-name: Build and deploy to GitHub Pages (Pages actions)
+name: Build and Deploy
 
 on:
   push:
     branches: [ main ]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 18
 
-      - name: Install dependencies
+      - name: Install
         run: npm ci
 
       - name: Build
         run: npm run build
 
-      - name: Create .nojekyll
-        run: mkdir -p out && touch out/.nojekyll
+      # If you're using next export for a static site; adjust if you use a different build step.
+      - name: Export static site (next export)
+        run: |
+          if npm run | grep -q "export"; then
+            npm run export
+          fi
 
-      - name: Upload artifact for Pages
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./out
+      - name: Ensure favicon is in publish root
+        run: |
+          # Try common output locations: out/ (next export) or build publish dir
+          if [ -f ./public/favicon.ico ]; then
+            if [ -d ./out ]; then
+              cp -f ./public/favicon.ico ./out/favicon.ico
+            else
+              # fallback: copy to a generic _site dir or .next (adjust if needed)
+              mkdir -p ./out
+              cp -f ./public/favicon.ico ./out/favicon.ico
+            fi
+          else
+            echo "Warning: public/favicon.ico not found"
+          fi
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
