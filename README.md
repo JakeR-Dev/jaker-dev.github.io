@@ -1,4 +1,7 @@
+
 # JakeR-Dev Portfolio & Sandbox
+
+![CI](https://github.com/JakeR-Dev/jaker-dev.github.io/actions/workflows/deploy.yml/badge.svg)
 
 https://jaker-dev.github.io/
 
@@ -32,6 +35,6 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Deployment
 
-To deploy to GitHub Pages, run `npm run deploy`
+The repository uses a GitHub Actions workflow to build and deploy the static `out` site on pushes to the `main` branch. Local deploy scripts were removed — to publish from CI, push to `main`.
 
-This builds assets and deploys them to the `gh-pages` branch. The Github Pages site is set to deploy specifically from that `gh-pages` branch.
+If you want to deploy locally (manual), you can still run `npm run build` then push the `out` folder to your Pages configuration.

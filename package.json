@@ -5,13 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next build && next export",
-    "deploy": "next build && gh-pages -d out -b gh-pages -f",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.1.4",
+    "next": "^16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "sass": "^1.97.2",
@@ -24,7 +22,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.4",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18",
-    "gh-pages": "^5.0.0"
+    "tailwindcss": "^4.1.18"
   }
 }
