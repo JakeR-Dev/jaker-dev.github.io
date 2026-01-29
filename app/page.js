@@ -36,7 +36,6 @@ export default function Home() {
           slidesPerView={'auto'}
           spaceBetween={16}
           loop={true}
-          loopAdditionalSlides={15}
           allowTouchMove={false}
           autoplay={{
             delay: 0,
