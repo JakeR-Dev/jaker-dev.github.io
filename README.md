@@ -35,6 +35,6 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Deployment
 
-The repository uses a GitHub Actions workflow to build and deploy the static `out` site on pushes to the `main` branch. Local deploy scripts were removed — to publish from CI, push to `main`.
+The repository uses a GitHub Actions workflow to build and deploy the static `out` site automatically on pushes to the `main` branch.
 
 If you want to deploy locally (manual), you can still run `npm run build` then push the `out` folder to your Pages configuration.
