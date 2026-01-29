@@ -1,17 +1,12 @@
-@use "mixins" as *;
-@use "variables" as *;
+@use "../../styles/mixins";
+@use "../../styles/variables";
 
-main, #menu-toggle {
-  opacity: 0;
-  filter: blur(20px);
-  will-change: opacity;
-}
 body {
   padding: 4rem 2rem 2rem;
-  @include media(tablet) {
+  @include mixins.media(tablet) {
     padding: 4rem 3rem;
   }
-  @include media(desktop) {
+  @include mixins.media(desktop) {
     padding: 4rem;
   }
   // shadow
@@ -53,35 +48,48 @@ body {
     transform: translateY(-20px);
     will-change: opacity, transform;
   }
-
-  // ** page fade-in ** //
-  &.show-me {
-    // main
-    main {
-      opacity: 1 !important;
-      filter: blur(0px);
-      transition: opacity .2s linear 1s,
-                  filter .3s linear 1s;
-    }
-    // nav toggle
-    #menu-toggle {
-      opacity: 1 !important;
-      filter: blur(0px);
-      transition: opacity .2s linear 1.25s,
-                  transform .4s $bounce,
-                  filter .3s linear 1.25s;
+  main, #menu-toggle {
+    filter: blur(20px);
+    will-change: opacity;
+  }
+  
+  // ** first time page fade-in ** //
+  &.border-me {
+    // border
+    &::after {
+      width: calc(100% - 2rem);
+      height: calc(100% - 2rem);
+      border-radius: 4px;
+      transition: width 1s variables.$elastic, height 1s variables.$elastic, border-radius .5s variables.$elastic;
     }
     // shadow
     &::before {
       opacity: 0.3;
       transition: opacity .2s linear 1s;
     }
-    // border
-    &::after {
-      width: calc(100% - 2rem);
-      height: calc(100% - 2rem);
-      border-radius: 4px;
-      transition: width 1s $elastic, height 1s $elastic, border-radius .5s $elastic;
+    .game-break,
+    .swiper.technologies {
+      opacity: 1;
+      transition: opacity .2s linear 1s;
+    }
+  }
+
+  // ** route change fade-in ** //
+  &.show-me {
+    // main
+    main {
+      opacity: 1;
+      filter: blur(0px);
+      transition: opacity .2s linear .2s,
+                  filter .3s linear .2s;
+    }
+    // nav toggle
+    #menu-toggle {
+      opacity: 1 !important;
+      filter: blur(0px);
+      transition: opacity .2s linear .5s,
+                  transform .4s variables.$bounce,
+                  filter .3s linear .5s;
     }
     // load animation utilities
     .load-1,
@@ -92,18 +100,18 @@ body {
     }
     .load-1 {
       transition:
-        opacity .8s linear 1s,
-        transform .8s $bounce 1s;
+        opacity .8s linear .2s,
+        transform .8s variables.$bounce .2s;
     }
     .load-2 {
       transition:
-        opacity .8s linear 1.1s,
-        transform .8s $bounce 1.1s;
+        opacity .8s linear .25s,
+        transform .8s variables.$bounce .25s;
     }
     .load-3 {
       transition:
-        opacity .8s linear 1.2s,
-        transform .8s $bounce 1.2s;
+        opacity .8s linear .3s,
+        transform .8s variables.$bounce .3s;
     }
   }
 }

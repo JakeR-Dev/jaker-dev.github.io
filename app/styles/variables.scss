@@ -10,11 +10,20 @@ $bounce: cubic-bezier(0.47, 1.64, 0.41, 0.8);
 $elastic: cubic-bezier(0.83, 0, 0.17, 1);
 
 :root {
-  --font-heading: "Space Grotesk", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
   --color-charcoal: #0f0f11;
   --color-cream: #f4f4f6;
   --color-neon: #B6FF44;
   --color-gray: #9CA0A5;
   --color-slate: #1A1C1F;
+  --background: var(--color-charcoal);
+  --foreground: var(--color-cream);
+}
+
+@theme inline {
+  --color-background: var(--color-charcoal);
+  --color-foreground: var(--color-cream);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-heading);
 }

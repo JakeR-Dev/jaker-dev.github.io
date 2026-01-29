@@ -1,5 +1,5 @@
-@use "mixins" as *;
-@use "variables" as *;
+@use "mixins";
+@use "variables";
 
 .swiper {
   &.technologies {
@@ -14,7 +14,7 @@
   &.work-samples {
     .swiper-slide {
       height: auto;
-      @include media(wide) {
+      @include mixins.media(wide) {
         width: 80%;
       }
     }
@@ -67,7 +67,7 @@ a.btn {
     left: 0;
     background: var(--color-neon);
     z-index: 0;
-    transition: width .4s $bounce;
+    transition: width .4s variables.$bounce;
   }
   &:hover {
     color: var(--color-charcoal);
@@ -118,7 +118,7 @@ a.btn {
   }
   &_icon {
     svg {
-      transition: transform .5s $bounce;
+      transition: transform .5s variables.$bounce;
     }
     polygon {
       border-radius: 4px;

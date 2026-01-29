@@ -1,11 +1,11 @@
-@use "mixins" as *;
-@use "typography" as *;
-@use "variables" as *;
+@use "../../styles/mixins";
+@use "../../styles/typography";
+@use "../../styles/variables";
 
 #menu-toggle {
   .toggle-dot {
     border: 2px solid var(--color-cream);
-    transition: transform .4s $bounce;
+    transition: transform .4s variables.$bounce;
     &.plus-hover {
       &::before, &::after {
         content: '';
@@ -17,7 +17,7 @@
         border-radius: 10px;
         transform: translate(-50%, -50%);
         opacity: 0;
-        transition: all .4s $bounce;
+        transition: all .4s variables.$bounce;
       }
       &::before {
         height: 0;
@@ -89,12 +89,13 @@
 }
 
 #menu {
-  transition: left .8s $elastic;
-  @include fancy-border(charcoal);
+  @include mixins.fancy-border(charcoal);
+  transition: left .8s variables.$elastic, opacity .1s linear .8s;
   &.menu-open {
     left: 0;
     pointer-events: all;
     opacity: 1;
+    transition: left .8s variables.$elastic;
   }
   ul {
     list-style: inside decimal-leading-zero;
@@ -103,7 +104,7 @@
         @extend .h2;
         display: inline-block;
         text-shadow: 2px 2px 0px var(--color-neon);
-        transition: text-shadow .3s $elastic;
+        transition: text-shadow .3s variables.$elastic;
         &:hover {
           text-shadow: 6px 6px 0px var(--color-neon);
         }
@@ -113,7 +114,7 @@
   a.social {
     img {
       box-shadow: 2px 2px 0 var(--color-neon);
-      transition: box-shadow .3s $elastic;
+      transition: box-shadow .3s variables.$elastic;
     }
     &:hover {
       img {
