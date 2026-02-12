@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Jake Ryan - Senior Developer",
+  title: "Jake Ryan - Senior Full-Stack Developer (Front-End Leaning)",
   description: "Polished interfaces backed by reliable engineering.",
 };
 
