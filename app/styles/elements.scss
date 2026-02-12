@@ -19,6 +19,12 @@
       }
     }
   }
+  &.testimonials {
+    @apply pb-10;
+    .swiper-pagination-bullet {
+      background: var(--color-cream);
+    }
+  }
   .swiper-pagination-bullet-active {
     background: var(--color-charcoal);
   }

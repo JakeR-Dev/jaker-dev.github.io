@@ -27,7 +27,7 @@ export default function Work() {
           {/* aila */}
           <SwiperSlide>
             <div className="p-4 md:p-6 lg:p-8 xl:p-10 pb-10 xl:pb-12 rounded-sm bg-cream h-full">
-              <div className="relative w-full h-[220px] xl:h-[300px] mb-6">
+              <div className="relative w-full h-[220px] xl:h-[250px] mb-6">
                 <Image
                   className="border-4 border-(--color-charcoal) rounded-sm object-cover"
                   src="/aila-screenshot-1.png"
@@ -49,35 +49,10 @@ export default function Work() {
             </div>
           </SwiperSlide>
 
-          {/* powder day */}
-          <SwiperSlide>
-            <div className="p-4 md:p-6 lg:p-8 xl:p-10 pb-10 xl:pb-12 rounded-sm bg-cream h-full">
-              <div className="relative w-full h-[220px] xl:h-[300px] mb-6">
-                <Image
-                  className="border-4 border-(--color-charcoal) rounded-sm object-cover"
-                  src="/powder-day-screenshot.png"
-                  alt="Powder Day screenshot"
-                  fill
-                />
-              </div>
-              <div className="flex flex-row flex-wrap mb-4">
-                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Javascript</div>
-                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">React</div>
-                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">REST API</div>
-                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Figma</div>
-                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Vite</div>
-                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">SCSS</div>
-              </div>
-              <h3 className="color-charcoal">Powder Day</h3>
-              <p>A React app that gathers the latest snow conditions from the best ski resorts in North America. Calculates a "Send Score" based on various weather factors to determine which resorts are worth visiting. Utilizes a REST API for real-time updates and Vite for fast development.</p>
-              <a href="https://jaker-dev.github.io/PowderDay/" target="_blank" rel="nofollow" className="btn btn-neon"><span>Visit</span></a>
-            </div>
-          </SwiperSlide>
-
           {/* alteryx */}
           <SwiperSlide>
             <div className="p-4 md:p-6 lg:p-8 xl:p-10 pb-10 xl:pb-12 rounded-sm bg-cream h-full">
-              <div className="relative w-full h-[220px] xl:h-[300px] mb-6">
+              <div className="relative w-full h-[220px] xl:h-[250px] mb-6">
                 <Image
                   className="border-4 border-(--color-charcoal) rounded-sm object-cover"
                   src="/alteryx-screenshot.png"
@@ -99,10 +74,35 @@ export default function Work() {
             </div>
           </SwiperSlide>
 
+          {/* powder day */}
+          <SwiperSlide>
+            <div className="p-4 md:p-6 lg:p-8 xl:p-10 pb-10 xl:pb-12 rounded-sm bg-cream h-full">
+              <div className="relative w-full h-[220px] xl:h-[250px] mb-6">
+                <Image
+                  className="border-4 border-(--color-charcoal) rounded-sm object-cover"
+                  src="/powder-day-screenshot.png"
+                  alt="Powder Day screenshot"
+                  fill
+                />
+              </div>
+              <div className="flex flex-row flex-wrap mb-4">
+                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Javascript</div>
+                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">React</div>
+                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">REST API</div>
+                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Figma</div>
+                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">Vite</div>
+                <div className="pill bg-charcoal color-cream flex-0 mb-2 mr-2">SCSS</div>
+              </div>
+              <h3 className="color-charcoal">Powder Day</h3>
+              <p>A React app that gathers the latest conditions from the best ski resorts in North America. Calculates a "Send Score" based on various weather factors to determine which resorts are worth visiting. Leverages REST APIs for real-time updates and Vite for fast development.</p>
+              <a href="https://jaker-dev.github.io/PowderDay/" target="_blank" rel="nofollow" className="btn btn-neon"><span>Visit</span></a>
+            </div>
+          </SwiperSlide>
+
           {/* intentsify */}
           <SwiperSlide>
             <div className="p-4 md:p-6 lg:p-8 xl:p-10 pb-10 xl:pb-12 rounded-sm bg-cream h-full">
-              <div className="relative w-full h-[220px] xl:h-[300px] mb-6">
+              <div className="relative w-full h-[220px] xl:h-[250px] mb-6">
                 <Image
                   className="border-4 border-(--color-charcoal) rounded-sm object-cover"
                   src="/intentsify-screenshot.png"
@@ -127,7 +127,7 @@ export default function Work() {
           {/* quantifind */}
           <SwiperSlide>
             <div className="p-4 md:p-6 lg:p-8 xl:p-10 pb-10 xl:pb-12 rounded-sm bg-cream h-full">
-              <div className="relative w-full h-[220px] xl:h-[300px] mb-6">
+              <div className="relative w-full h-[220px] xl:h-[250px] mb-6">
                 <Image
                   className="border-4 border-(--color-charcoal) rounded-sm object-cover"
                   src="/quantifind-screenshot.png"
