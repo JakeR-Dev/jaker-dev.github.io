@@ -2,6 +2,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { PageLoadProvider } from '../utils/page-load-context';
 import Body from './components/body/body';
 import Header from './components/header/header';
+import Cursor from './components/cursor/cursor';
 import "./globals.scss";
 
 const inter = Inter({
@@ -22,7 +23,6 @@ export const metadata = {
   description: "Polished interfaces backed by reliable engineering.",
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
           <main className="main relative h-full z-0 overflow-auto">
             {children}
           </main>
+          <Cursor />
         </Body>
       </PageLoadProvider>
     </html>

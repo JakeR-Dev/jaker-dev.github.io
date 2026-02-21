@@ -1,9 +1,19 @@
 'use client';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import { usePageLoad } from '../utils/page-load-context';
 import 'swiper/swiper-bundle.css';
 
 export default function Home() {
+  const { setCursorClass } = usePageLoad();
+
+  const mouseEnter = () => {
+    setCursorClass('link');
+  };
+  const mouseLeave = () => {
+    setCursorClass('enter');
+  };
+
   return (
     <section id="hero" className="flex flex-col flex-nowrap justify-between items-start size-full">
       <div className="upper">
@@ -23,7 +33,7 @@ export default function Home() {
               </text>
             </svg>
           </div>
-          <a className="game-break_icon block absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-75" href="https://jaker-dev.github.io/grid-runner/" target="blank">
+          <a className="game-break_icon block absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-75" href="https://jaker-dev.github.io/grid-runner/" target="blank" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             <svg width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
               <polygon points="30,20 80,50 30,80" fill="#f4f4f6" stroke="#f4f4f6" strokeWidth="4" strokeLinejoin="round" />
             </svg>

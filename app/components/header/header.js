@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { usePageLoad } from '../../../utils/page-load-context';
 import Image from 'next/image';
 import Link from 'next/link';
 import './header.scss';
@@ -7,11 +8,18 @@ import './header.scss';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [emailLink, setEmailLink] = useState('Email Me');
+  const { setCursorClass } = usePageLoad();
   const email = "jryan6492@gmail.com";
   const subject = "?subject=Let's%20build%20something%20together!";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const mouseEnter = () => {
+    setCursorClass('link');
+  };
+  const mouseLeave = () => {
+    setCursorClass('enter');
   };
 
   // un-obscure my email address
@@ -26,6 +34,8 @@ export default function Header() {
       {/* menu toggler */}
       <button 
         onClick={toggleMenu}
+        onMouseEnter={mouseEnter}
+        onMouseLeave={mouseLeave}
         className="fixed grid grid-cols-3 right-[2rem] top-[2rem] gap-[4px] w-[2rem] h-[2rem] overflow-hidden z-2 cursor-pointer opacity-0" 
         id="menu-toggle"
         aria-label="open menu" 
@@ -46,16 +56,16 @@ export default function Header() {
         <div className="menu-inner pt-[5rem] px-[2rem] pb-[2rem] md:pt-[4rem] md:px-[3rem] md:pb-[3rem] lg:p-[4rem]">
           <ul>
             <li>
-              <Link href="/" onClick={toggleMenu}>Home</Link>
+              <Link href="/" onClick={toggleMenu} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>Home</Link>
             </li>
             <li>
-              <Link href="/about" onClick={toggleMenu}>About</Link>
+              <Link href="/about" onClick={toggleMenu} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>About</Link>
             </li>
             <li>
-              <Link href="/work" onClick={toggleMenu}>Work</Link>
+              <Link href="/work" onClick={toggleMenu} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>Work</Link>
             </li>
           </ul>
-          <a className="social inline-block" href="https://www.linkedin.com/in/jakepotterryan/" target="_blank" aria-label="Visit my LinkedIn profile">
+          <a className="social inline-block" href="https://www.linkedin.com/in/jakepotterryan/" target="_blank" aria-label="Visit my LinkedIn profile" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             <Image
               className="inline-block max-w-[24px] max-h-[24px] mt-[2rem] rounded-[4px] rounded-tr-none mr-4"
               src="/linkedin-black.png"
@@ -64,7 +74,7 @@ export default function Header() {
               height="24"
             />
           </a>
-          <a className="social inline-block" href="https://github.com/JakeR-Dev" target="_blank" aria-label="Visit my GitHub profile">
+          <a className="social inline-block" href="https://github.com/JakeR-Dev" target="_blank" aria-label="Visit my GitHub profile" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             <Image
               className="inline-block max-w-[24px] max-h-[24px] mt-[2rem] rounded-[4px] rounded-tr-none mr-4"
               src="/github-black.png"
@@ -73,7 +83,7 @@ export default function Header() {
               height="24"
             />
           </a>
-          <a className="social inline-block" href={emailLink} target="_blank" aria-label="Shoot me an email" id="email-me" rel="noopener noreferrer">
+          <a className="social inline-block" href={emailLink} target="_blank" aria-label="Shoot me an email" id="email-me" rel="noopener noreferrer" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             <Image
               className="inline-block max-w-[24px] max-h-[24px] mt-[2rem] rounded-[4px] rounded-tr-none mr-4"
               src="/email-black.png"

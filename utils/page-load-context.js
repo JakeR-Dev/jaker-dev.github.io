@@ -7,6 +7,7 @@ const PageLoadContext = createContext();
 export function PageLoadProvider({ children }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [borderMe, setBorderMe] = useState(false);
+  const [cursorClass, setCursorClass] = useState('');
   const pathname = usePathname();
   const isFirstMount = useRef(true);
 
@@ -31,7 +32,7 @@ export function PageLoadProvider({ children }) {
   }, [pathname]);
 
   return (
-    <PageLoadContext.Provider value={{ isLoaded, setIsLoaded, borderMe, setBorderMe }}>
+    <PageLoadContext.Provider value={{ isLoaded, setIsLoaded, borderMe, setBorderMe, cursorClass, setCursorClass }}>
       {children}
     </PageLoadContext.Provider>
   );

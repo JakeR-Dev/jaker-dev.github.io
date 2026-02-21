@@ -30,7 +30,6 @@
   }
 }
 
-
 blockquote {
   &::before {
     content: '"';
@@ -117,7 +116,6 @@ a.btn {
   }
 }
 .game-break {
-  cursor: pointer;
   &_text {
     will-change: transform;
     animation: spin 12s linear infinite;
