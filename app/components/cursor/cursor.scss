@@ -1,3 +1,5 @@
+@use "../../styles/variables";
+
 @keyframes cursorEnter {
   from {
     height: 0px;
@@ -43,13 +45,13 @@
     margin-left: -7px;
   }
   to {
-    border: 1px solid var(--color-neon);
+    border: 1px solid var(--color-purple);
     outline: 1px solid var(--color-charcoal);
     background: transparent;
-    margin-left: -28px;
-    margin-top: -28px;
-    width: 56px;
-    height: 56px;
+    margin-left: -21px;
+    margin-top: -21px;
+    width: 42px;
+    height: 42px;
   }
 }
 
@@ -66,21 +68,22 @@ body, a, button, .swiper .swiper-pagination-clickable .swiper-pagination-bullet 
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-
-  #circle1 {
-    position: absolute;
-    box-shadow: 0 0 1px 0 var(--color-cream) inset, 0 0 1px 0 var(--color-cream);
-    border-radius: 50%;
-    mix-blend-mode: exclusion;
-    background: var(--color-neon);
-    &.enter {
-      animation: cursorEnter 0.5s forwards;
-    }
-    &.leave {
-      animation: cursorLeave 0.3s forwards;
-    }
-    &.link {
-      animation: linkFocusIn .3s forwards;
-    }
+  transition: all .25s variables.$bounce;
+  will-change: top, left;
+}
+#cursor-circle {
+  position: absolute;
+  box-shadow: 0 0 1px 0 var(--color-cream) inset, 0 0 1px 0 var(--color-cream);
+  border-radius: 50%;
+  mix-blend-mode: exclusion;
+  background: var(--color-purple);
+  &.enter {
+    animation: 0.25s variables.$bounce forwards cursorEnter;
+  }
+  &.leave {
+    animation: 0.25s variables.$bounce forwards cursorLeave;
+  }
+  &.link {
+    animation: 0.35s variables.$bounce forwards linkFocusIn;
   }
 }

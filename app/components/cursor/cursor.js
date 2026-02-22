@@ -26,6 +26,7 @@ export default function Cursor() {
 
     // mouse enter viewport
     const handleMouseEnter = () => {
+      if (!cursorRef.current) return;
       setCursorClass('enter');
     };
 
@@ -41,7 +42,7 @@ export default function Cursor() {
 
   return (
     <div ref={cursorRef} id="cursor" className="cursor" aria-hidden="true">
-      <div id="circle1" className={`circle ${cursorClass}`}></div>
+      <div id="cursor-circle" className={`circle ${cursorClass}`}></div>
     </div>
   );
 }
