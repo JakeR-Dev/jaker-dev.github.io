@@ -55,9 +55,11 @@
   }
 }
 
-// hide default cursor
+// hide default cursor for non-touchscreen devices
 body, a, button, .swiper .swiper-pagination-clickable .swiper-pagination-bullet {
-  cursor: none;
+  @media (hover: hover) and (pointer: fine) {
+    cursor: none;
+  }
 }
 
 // custom cursor
@@ -69,6 +71,10 @@ body, a, button, .swiper .swiper-pagination-clickable .swiper-pagination-bullet 
   z-index: 9999;
   transform: translate(-50%, -50%);
   will-change: top, left;
+  display: none;
+  @media (hover: hover) and (pointer: fine) {
+    display: block;
+  }
 }
 #cursor-circle {
   position: absolute;
