@@ -27,8 +27,8 @@ export default function About() {
           height="100"
         />
         <h2 className="color-cream">About Me</h2>
-        <p className="color-cream">I'm a web developer with over a decade of experience in bringing innovative designs to life. I take the phrase "pixel perfect" literally and I believe that website interactions, when done right, can leave a lasting impact on the user.</p>
-        <p className="color-cream">I have experience in a variety of technologies, including JavaScript, PHP, React, APIs, HTML, SCSS, Tailwind, and more. I have a deep knowledge of CMS platforms, most prominently WordPress, but also WebFlow and HubSpot. I have a strong understanding of ADA compliance and Google Analytics as well. Take a look at my resume to see my full skillset.</p>
+        <p className="color-cream">I'm a Senior Web Engineer with over a decade of experience in bringing innovative designs to life. I take the phrase "pixel perfect" literally and I believe that website interactions, when done right, can leave a lasting impact on the user.</p>
+        <p className="color-cream">I have experience in a variety of technologies, including JavaScript, PHP, React, APIs, HTML, SCSS, Tailwind, and more. I have a deep knowledge of CMS platforms, most prominently WordPress, but also Drupal, WebFlow, and HubSpot. I have a strong understanding of WCAG and ADA compliance and Google Analytics as well. Take a look at my resume to see my full skillset.</p>
         <a href="/Jake-Ryan-Resume-FS-FE.pdf" className="btn" target="_blank" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}><span>Full Resume</span></a>
       </div>
       {/* testimonial */}

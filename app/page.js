@@ -18,7 +18,7 @@ export default function Home() {
     <section id="hero" className="flex flex-col flex-nowrap justify-between items-start size-full">
       <div className="upper">
         <h1 className="color-cream load-2">Hey I'm Jake</h1>
-        <h3 className="color-neon load-1">Senior Web Devloper. Polished interfaces backed by reliable engineering.</h3>
+        <h3 className="color-neon load-1">Senior Web Engineer. Polished interfaces backed by reliable engineering.</h3>
       </div>
       <div className="lower max-w-full">
         {/* take a break */}
