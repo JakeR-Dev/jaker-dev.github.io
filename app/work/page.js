@@ -105,7 +105,7 @@ export default function Work() {
               </div>
               <h3 className="color-charcoal">Powder Day</h3>
               <p>A React app that gathers the latest conditions from the best ski resorts in North America. Calculates a "Send Score" based on various weather factors to determine which resorts are worth visiting. Leverages REST APIs for real-time updates and Vite for fast development.</p>
-              <a href="https://jaker-dev.github.io/PowderDay/" target="_blank" rel="nofollow" className="btn btn-neon" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}><span>Visit</span></a>
+              <a href="https://powderday.io/" target="_blank" rel="nofollow" className="btn btn-neon" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}><span>Visit</span></a>
             </div>
           </SwiperSlide>
 
