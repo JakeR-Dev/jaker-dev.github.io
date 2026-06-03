@@ -1,9 +1,7 @@
 .animated-shadow-text {
   display: block;
   text-shadow: 5px 5px 0 var(--color-gray);
-  will-change: text-shadow, transform;
   transform-style: preserve-3d;
-  transition: transform .1s linear, text-shadow .1s linear;
 }
 
 @media (prefers-reduced-motion: reduce) {
