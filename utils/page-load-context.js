@@ -11,21 +11,21 @@ export function PageLoadProvider({ children }) {
   const pathname = usePathname();
   const isFirstMount = useRef(true);
 
+  // Initial mount
   useEffect(() => {
-    // On initial mount
     setBorderMe(true);
     setTimeout(() => {
       setIsLoaded(true);
     }, 700);
   }, []);
   
+  // Route change
   useEffect(() => {
     // Skip on first mount
     if (isFirstMount.current) {
       isFirstMount.current = false;
       return;
     }
-    // On route change only
     setIsLoaded(false);
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);

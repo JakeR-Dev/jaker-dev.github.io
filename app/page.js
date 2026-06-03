@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { usePageLoad } from '../utils/page-load-context';
+import { AnimatedShadowText } from './components/animatedShadowText/animatedShadowText';
 import 'swiper/swiper-bundle.css';
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
   return (
     <section id="hero" className="flex flex-col flex-nowrap justify-between items-start size-full">
       <div className="upper">
-        <h1 className="color-cream load-2">Hey I'm Jake</h1>
+        <AnimatedShadowText className="color-cream load-2 overflow-hidden">Hey I'm Jake</AnimatedShadowText>
         <h3 className="color-neon load-1">Senior Web Engineer. Polished interfaces backed by reliable engineering.</h3>
       </div>
       <div className="lower max-w-full">
